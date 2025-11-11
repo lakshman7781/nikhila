@@ -1,0 +1,199 @@
+/* Event Demo Styling */
+
+.event-demo-container {
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Message Display - Large Font Size */
+.message {
+  font-size: 15rem;
+  margin: 25px 0;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect on message display */
+.message:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+/* Event Buttons */
+.event-button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.click-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.click-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 12px 24px rgba(245, 87, 108, 0.4);
+}
+
+.click-btn:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.hover-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.hover-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 12px 24px rgba(79, 172, 254, 0.4);
+}
+
+/* Input Container */
+.input-container {
+  margin: 40px 0;
+}
+
+.event-input {
+  padding: 20px 30px;
+  font-size: 1.5rem;
+  width: 500px;
+  max-width: 90%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-input:focus {
+  outline: none;
+  border-color: #f5576c;
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(245, 87, 108, 0.4);
+}
+
+.event-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Instructions Section */
+.instructions {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.instructions h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.instructions li {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.instructions li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 8rem;
+    margin: 20px 0;
+  }
+
+  .event-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+
+  .event-input {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
+
+  .instructions h3 {
+    font-size: 1.5rem;
+  }
+
+  .instructions li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .message {
+    font-size: 4rem;
+    padding: 20px;
+  }
+
+  .button-container {
+    gap: 15px;
+  }
+
+  .event-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}

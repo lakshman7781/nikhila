@@ -1,0 +1,124 @@
+// SASS/SCSS Styling Example
+// To use: npm install sass, then import this file in your component
+
+// Variables
+$primary-color: #4CAF50;
+$primary-hover: #45a049;
+$secondary-color: #1976d2;
+$background-light: #e3f2fd;
+$background-gray: #f5f5f5;
+$text-dark: #333;
+$border-radius: 8px;
+$spacing-unit: 20px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color, $hover-color) {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: $bg-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// Main App Container
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Arial', sans-serif;
+
+  .app-header {
+    color: $text-dark;
+    font-size: 2.5rem;
+    margin-bottom: $spacing-unit;
+  }
+
+  .greeting-container {
+    margin: $spacing-unit 0;
+    padding: $spacing-unit;
+    background-color: $background-light;
+    border-radius: $border-radius;
+    display: inline-block;
+    min-width: 300px;
+
+    .greeting-text {
+      color: $secondary-color;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .update-button {
+    @include button-style($primary-color, $primary-hover);
+    margin-top: $spacing-unit;
+  }
+
+  .notes-section {
+    margin-top: 40px;
+    padding: $spacing-unit;
+    background-color: $background-gray;
+    border-radius: $border-radius;
+    max-width: 600px;
+    margin: 40px auto;
+
+    h3 {
+      color: $text-dark;
+      margin-bottom: 15px;
+    }
+
+    .notes-list {
+      text-align: left;
+      list-style-type: disc;
+      padding-left: $spacing-unit;
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+
+        strong {
+          color: $secondary-color;
+        }
+
+        ul {
+          margin-top: 5px;
+          list-style-type: circle;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .app-container {
+    margin-top: 30px;
+
+    .app-header {
+      font-size: 2rem;
+    }
+
+    .greeting-container {
+      min-width: 250px;
+
+      .greeting-text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
